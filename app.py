@@ -7,7 +7,6 @@ st.set_page_config(page_title="Dashboard", layout="wide")
 # ---- LOAD DATA ----
 CSV_URL = "https://docs.google.com/spreadsheets/d/e/2PACX-1vSm-RCknFcNTfdxfpgwkxFZenuIQfLORE5kXDTyKF_FeW6CXCvQffk9RFrM2Ptcf2S-icK_mPOSw6_U/pub?output=csv"
 
-@st.cache_data(ttl=300)
 def load_data():
     return pd.read_csv(CSV_URL)
 
